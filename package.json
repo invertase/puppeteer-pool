@@ -1,13 +1,21 @@
 {
   "name": "@invertase/puppeteer-pool",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "main": "src/index.js",
   "files": [
     "src"
   ],
+  "keywords": [
+    "puppeteer",
+    "puppeteer-pool",
+    "generic-pool",
+    "pool",
+    "pooling",
+    "throttle"
+  ],
   "author": "Invertase <oss@invertase.io> (http://invertase.io)",
   "license": "Apache-2.0",
-  "description": "Pool puppeteer browser instances for fast access.",
+  "description": "Pool Puppeteer browser instances for fast access.",
   "dependencies": {
     "generic-pool": "^3.4.2"
   },
