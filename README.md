@@ -15,7 +15,7 @@
 
 ----
 
-[Puppeteer](https://github.com/GoogleChrome/puppeteer) browser instance pooling via [generic-pool](https://github.com/coopernurse/node-pool)
+[Puppeteer](https://github.com/GoogleChrome/puppeteer) [browser](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-browser) instance pooling via [generic-pool](https://github.com/coopernurse/node-pool)
 
 ## Installation
 
@@ -44,18 +44,18 @@ const pool = createPuppeteerPool({
 });
 ```
 
-### Acquire a browser instance
+### Acquire a [browser](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-browser) instance
 
 ```js
 const browserInstance = await pool.acquire();
 ```
 
-### Release a browser instance
+### Release a [browser](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-browser) instance
 
 ```js
 const browserInstance = await pool.acquire();
 // do something with your instance,
-// when you're finished; call release:
+// when you're finished with the instance; call release:
 await pool.release(browserInstance);
 ```
 
