@@ -1,0 +1,27 @@
+{
+  "name": "@invertase/puppeteer-pool",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "author": "Invertase <oss@invertase.io> (http://invertase.io)",
+  "license": "Apache-2.0",
+  "description": "Pool puppeteer browser instances for fast access.",
+  "dependencies": {
+    "generic-pool": "^3.4.2"
+  },
+  "peerDependencies": {
+    "puppeteer": ">= 1.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.11.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "prettier": "^1.15.3",
+    "puppeteer": "^1.11.0"
+  }
+}
