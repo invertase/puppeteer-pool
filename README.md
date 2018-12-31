@@ -20,8 +20,53 @@
 ## Installation
 
 ```bash
+# NPM:
 npm i @invertase/puppeteer-pool
-# OR
+# YARN:
 yarn add @invertase/puppeteer-pool
 ```
 
+## Usage
+
+### Import
+
+```js
+const createPuppeteerPool = require('@invertase/puppeteer-pool');
+```
+
+### Create a pool
+
+```js
+const pool = createPuppeteerPool({
+  min: 2,
+  max: 10,
+  puppeteerArgs: [{ headless: false }],
+});
+```
+
+### Acquire a browser instance
+
+```js
+const browserInstance = await pool.acquire();
+```
+
+### Release a browser instance
+
+```js
+const browserInstance = await pool.acquire();
+// do something with your instance,
+// when you're finished; call release:
+await pool.release(browserInstance);
+```
+
+### Drain and clear the pool
+
+```js
+await pool.drain();
+await pool.clear();
+```
+
+
+## License
+
+See [LICENSE](/LICENSE)
