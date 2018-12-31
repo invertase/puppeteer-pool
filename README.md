@@ -40,7 +40,7 @@ const createPuppeteerPool = require('@invertase/puppeteer-pool');
 const pool = createPuppeteerPool({
   min: 2,
   max: 10,
-  puppeteerArgs: [{ headless: false }],
+  puppeteerLaunchArgs: [{ headless: false }],
 });
 ```
 
