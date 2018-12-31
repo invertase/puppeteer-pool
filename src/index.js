@@ -5,20 +5,20 @@ const DEFAULTS = {
   min: 2,
   max: 10,
   testOnBorrow: true,
-  puppeteerArgs: [{ headless: true }],
+  puppeteerLaunchArgs: [{ headless: true }],
   validate: () => Promise.resolve(true),
 };
 
 /**
  *
- * @param puppeteerArgs
+ * @param puppeteerLaunchArgs
  * @param validate
  */
-function createFactory({ puppeteerArgs, validate }) {
+function createFactory({ puppeteerLaunchArgs, validate }) {
   const factory = {};
 
   factory.create = function createFn() {
-    return puppeteer.launch(...puppeteerArgs);
+    return puppeteer.launch(...puppeteerLaunchArgs);
   };
 
   factory.destroy = function destroyFn(browserInstance) {
@@ -42,7 +42,7 @@ function createPool(poolConfig) {
   const factory = createFactory(Object.assign({}, config));
 
   delete config.validate;
-  delete config.puppeteerArgs;
+  delete config.puppeteerLaunchArgs;
   return genericPool.createPool(factory, config);
 }
 
