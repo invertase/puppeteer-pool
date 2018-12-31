@@ -16,3 +16,12 @@
 ----
 
 [Puppeteer](https://github.com/GoogleChrome/puppeteer) browser instance pooling via [generic-pool](https://github.com/coopernurse/node-pool)
+
+## Installation
+
+```bash
+npm i @invertase/puppeteer-pool
+# OR
+yarn add @invertase/puppeteer-pool
+```
+
