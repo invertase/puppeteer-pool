@@ -15,13 +15,58 @@
 
 ----
 
-[Puppeteer](https://github.com/GoogleChrome/puppeteer) browser instance pooling via [generic-pool](https://github.com/coopernurse/node-pool)
+[Puppeteer](https://github.com/GoogleChrome/puppeteer) [browser](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-browser) instance pooling via [generic-pool](https://github.com/coopernurse/node-pool)
 
 ## Installation
 
 ```bash
+# NPM:
 npm i @invertase/puppeteer-pool
-# OR
+# YARN:
 yarn add @invertase/puppeteer-pool
 ```
 
+## Usage
+
+### Import
+
+```js
+const createPuppeteerPool = require('@invertase/puppeteer-pool');
+```
+
+### Create a pool
+
+```js
+const pool = createPuppeteerPool({
+  min: 2,
+  max: 10,
+  puppeteerArgs: [{ headless: false }],
+});
+```
+
+### Acquire a [browser](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-browser) instance
+
+```js
+const browserInstance = await pool.acquire();
+```
+
+### Release a [browser](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-browser) instance
+
+```js
+const browserInstance = await pool.acquire();
+// do something with your instance,
+// when you're finished with the instance; call release:
+await pool.release(browserInstance);
+```
+
+### Drain and clear the pool
+
+```js
+await pool.drain();
+await pool.clear();
+```
+
+
+## License
+
+See [LICENSE](/LICENSE)
