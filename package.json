@@ -14,6 +14,10 @@
     "throttle"
   ],
   "author": "Invertase <oss@invertase.io> (http://invertase.io)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/invertase/puppeteer-pool"
+  },
   "license": "Apache-2.0",
   "description": "Pool Puppeteer browser instances for fast access.",
   "dependencies": {
