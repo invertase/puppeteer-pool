@@ -90,3 +90,11 @@ await pool.clear();
 ## License
 
 See [LICENSE](/LICENSE)
+
+---
+
+Built and maintained with 💛 by [Invertase](https://invertase.io).
+
+- [💼 Hire Us](https://invertase.io/hire-us)
+- [☕️ Sponsor Us](https://opencollective.com/react-native-firebase)
+- [👩‍💻 Work With Us](https://invertase.io/jobs)
